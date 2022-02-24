@@ -1,0 +1,84 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- create_account
+- confirm_data
+- new_data
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- change_data
+- complain
+entities:
+- Mail
+- Name
+- Password
+- Telephone
+- mail
+- name
+- password
+- telephone
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_confirm:
+  - text: |-
+      Dear Digisign Customers,
+      Thank you for contacting Digisign. We apologize in advance for the inconvenience. We will help you deal with the problem, but first, please complete the data below:
+
+      Name :
+      No phone :
+      Email :
+      For application purposes:
+      Complaints / Constraints (details):
+
+      Please fill in the data above and include proof of screenshots when problems occur, so that our team can easily check. We are waiting for further information. That's all we can say, we thank you for your attention.
+      Regards,
+  utter_change:
+  - text: |-
+      Dear Digisign Customers,
+      Thank you for contacting us. We inform you that your account is active on Digisign. For an active Digisign account, you can change data such as email / mobile number / signature independently through the Digisign website at https://app.digisign.id.
+      If you want to change the mobile number on your Digisign account, please enter the Digisign dashboard by logging in to the https://app.digisign.id website -> select the Account Settings menu -> select Change Phone Number.
+      Before making data changes to your Digisign account, we recommend that you make the same data changes from the loan/funding application that you have used.
+      Thank you.
+      Regards, CS Digisign
+  utter_new:
+  - text: |-
+      Dear Digisign Customers,
+      Thank you for the information provided. For the next step, we will verigy the information first and then process it immediately once it's verified. Please be willing to wait, we will inform you again via email.
+      Regards, CS Digisign
+  utter_create:
+  - text: |-
+      Good Day, Thank you for contacting Digisign.
+      In order to register for a Digisign account, you can register from the loan/funding application that you want to use so that your Digisign account can be verified and integrated with the application account. Or you can register manually on the Digisign web at https://app.digisign.id/registration.html Thank you.
+      Regards,
+      CS Digisign
+  utter_complain:
+  - text: |-
+      Dear Customer.
+      Regarding this question, please contact Customer Service from the loan/funding application you are using to get more information, because Digisign only facilitates electronic/digital signatures and only handles problems with the Digisign application.
+      Best regards, CS Digisign
+actions:
+- utter_complain
+- utter_confirm
+- utter_create
+- utter_goodbye
+- utter_greet
+- utter_new

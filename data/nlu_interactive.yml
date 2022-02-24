@@ -1,0 +1,15 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+- intent: confirm_data
+  examples: |
+    - I want to confirm my data
+- intent: new_data
+  examples: |
+    - Name: [Alvin](Name) No Phone:[082150901078](telephone) Email:[alvinaria05@ymail.com](mail) Password:[spinku55](password)
+    - name:[Audy](name) telp no:[081221551231](telephone) E-mail:[roy_audy@yahoo.com](Mail) password:ceceku99
+- intent: create_account
+  examples: |
+    - I want to register

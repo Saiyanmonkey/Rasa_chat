@@ -1,0 +1,24 @@
+
+version: "3.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: confirm_data
+  - action: utter_confirm
+  - intent: new_data
+    entities:
+    - Name: Alvin
+    - telephone: '082150901078'
+    - mail: alvinaria05@ymail.com
+    - password: spinku55
+  - action: utter_new
+  - intent: create_account
+  - action: utter_create
+  - intent: new_data
+    entities:
+    - name: Audy
+    - telephone: '081221551231'
+    - Mail: roy_audy@yahoo.com
+  - action: utter_new

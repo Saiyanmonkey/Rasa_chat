@@ -1,0 +1,29 @@
+version: "3.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Give form when user wants to confirm data
+  steps:
+  - intent: confirm_data
+  - action: utter_confirm
+  
+
+- rule: accept new user data
+  steps:
+  - intent: new_data
+  - action: utter_new
+
+- rule: Register account
+  steps:
+  - intent: create_account
+  - action: utter_create
